@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Montserrat+Alternates|Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(145deg, #00b7a8, #00b7a8, #d3ccae, #00b7a8, #00b7a8, #d3ccae, #00b7a8, #00b7a8);
+  background-size: 800%; /* Aumento el tamaño del fondo para una transición más suave */
+  animation: fanimado 10s linear infinite; /* Alargar el tiempo de la animación para una transición más lenta */
+}
+
+.T {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 185px 300px;
+  border: 0;
+  border-radius: 40px;
+  padding: 40px;
+  box-shadow: 30px 20px 30px rgba(0, 0, 0, 0.5);
+  text-align: justify;
+  background: rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+}
+h1{
+  text-align: center;
+}
+.T::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(145deg, #00b7a8, #00b7a8, #d3ccae, #00b7a8, #00b7a8, #d3ccae, #00b7a8, #00b7a8);
+  background-size: 800%; /* Aumento el tamaño del fondo para una transición más suave */
+  animation: fanimado 10s linear infinite; /* Aseguramos que el fondo también tenga una animación suave */
+  z-index: -1; /* Asegura que el fondo no interfiera con el texto */
+}
+
+@keyframes fanimado {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 0%; /* La animación fluye de un extremo al otro sin reiniciar */
+  }
+}
